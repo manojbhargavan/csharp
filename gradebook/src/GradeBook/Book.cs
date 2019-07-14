@@ -21,18 +21,52 @@ namespace GradeBook
         {
             if (_recomputeStats)
             {
-                int index = 0;
-                do
+
+                for (int index = 0; index < _grades.Count; index++)
                 {
                     _stats.Min = Math.Min(_stats.Min, _grades[index]);
                     _stats.Max = Math.Max(_stats.Max, _grades[index]);
                     _stats.Average += _grades[index];
-                    index++;
-                } while (index < _grades.Count);
+                }
                 _stats.Average /= _grades.Count;
+
+                switch(_stats.Average)
+                {
+                    case var d when d >= 90.0:
+                        _stats.LetterGrade = 'A';
+                        break;
+                    case var avg when avg >= 80.0 && avg < 90.0:
+                        _stats.LetterGrade = 'B';
+                        break;
+                    case var avg when avg >= 70.0 && avg < 80.0:
+                        _stats.LetterGrade = 'C';
+                        break;
+                    case var avg when avg >= 60.0 && avg < 50.0:
+                        _stats.LetterGrade = 'D';
+                        break;
+                    case var avg when avg >= 50.0 && avg < 40.0:
+                        _stats.LetterGrade = 'E';
+                        break;
+                    default:
+                        _stats.LetterGrade = 'F';
+                        break;    
+                }
+
             }
             _recomputeStats = false;
             return _stats;
+        }
+
+        public void AddGrade(char grade)
+        {
+            switch (grade)
+            {
+                case 'A': AddGrade(90.0); break;
+                case 'B': AddGrade(80.0); break;
+                case 'C': AddGrade(70.0); break;
+                case 'D': AddGrade(60.0); break;
+                default: AddGrade(0); break;
+            }
         }
 
         public void AddGrade(double grade)
