@@ -29,8 +29,9 @@ namespace GradeBook
                     _stats.Average += _grades[index];
                 }
                 _stats.Average /= _grades.Count;
+                _stats.Average = Math.Round(_stats.Average, 2);
 
-                switch(_stats.Average)
+                switch (_stats.Average)
                 {
                     case var d when d >= 90.0:
                         _stats.LetterGrade = 'A';
@@ -49,7 +50,7 @@ namespace GradeBook
                         break;
                     default:
                         _stats.LetterGrade = 'F';
-                        break;    
+                        break;
                 }
 
             }
