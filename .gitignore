@@ -2,3 +2,7 @@ gradebook/src/GradeBook/bin/*
 gradebook/src/GradeBook/obj/*
 gradebook/test/GradeBook.Tests/bin/*
 gradebook/test/GradeBook.Tests/obj/*
+playground/src/PlayGround/bin/*
+playground/src/PlayGround/obj/*
+playground/test/bin/*
+playground/test/obj/*
