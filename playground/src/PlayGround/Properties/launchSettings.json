@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PlayGround": {
+      "commandName": "Project",
+      "commandLineArgs": "1"
+    }
+  }
+}

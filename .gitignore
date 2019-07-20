@@ -6,3 +6,4 @@ playground/src/PlayGround/bin/*
 playground/src/PlayGround/obj/*
 playground/test/bin/*
 playground/test/obj/*
+/playground/.vs/playground
