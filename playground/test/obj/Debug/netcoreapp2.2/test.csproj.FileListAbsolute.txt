@@ -1,0 +1,14 @@
+E:\csharp\playground\test\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+E:\csharp\playground\test\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+E:\csharp\playground\test\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+E:\csharp\playground\test\bin\Debug\netcoreapp2.2\test.deps.json
+E:\csharp\playground\test\bin\Debug\netcoreapp2.2\test.runtimeconfig.json
+E:\csharp\playground\test\bin\Debug\netcoreapp2.2\test.runtimeconfig.dev.json
+E:\csharp\playground\test\bin\Debug\netcoreapp2.2\test.dll
+E:\csharp\playground\test\bin\Debug\netcoreapp2.2\test.pdb
+E:\csharp\playground\test\obj\Debug\netcoreapp2.2\test.csprojAssemblyReference.cache
+E:\csharp\playground\test\obj\Debug\netcoreapp2.2\test.csproj.CoreCompileInputs.cache
+E:\csharp\playground\test\obj\Debug\netcoreapp2.2\test.AssemblyInfoInputs.cache
+E:\csharp\playground\test\obj\Debug\netcoreapp2.2\test.AssemblyInfo.cs
+E:\csharp\playground\test\obj\Debug\netcoreapp2.2\test.dll
+E:\csharp\playground\test\obj\Debug\netcoreapp2.2\test.pdb
