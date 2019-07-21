@@ -8,12 +8,37 @@ namespace PlayGround
     {
         static void Main(string[] args)
         {
-            #region World Population - 1
-            if (args[0] == "1")
+            Console.WriteLine("Enter the part to run\n1 --> Array\n2 --> List");
+            string choice = Console.ReadLine();
+            string worldPopFile = AppDomain.CurrentDomain.BaseDirectory + "\\Data\\World_population.csv";
+            #region World Population - Array (1)
+            if (choice == "1")
             {
-                string worldPopFile = AppDomain.CurrentDomain.BaseDirectory + "\\Data\\World_population.csv";
+                Console.Write("How many Countries whould be retrived: ");
+                int count = -1;
+                if (!int.TryParse(Console.ReadLine(), out count))
+                    count = 10;
 
-                var data = (new ParseCsv()).GetRecordsArray<WorldPopulationModel>(worldPopFile, 10, "Year_2020");
+                var data = (new ParseCsv()).GetRecordsArray<WorldPopulationModel>(worldPopFile, count, "Year_2020");
+
+                Console.WriteLine("Array Countries");
+                foreach(var curCountry in data)
+                {
+                    Console.WriteLine($"{curCountry.Year_2020:0 000 000}: {curCountry.Country}");
+                }
+            }
+            #endregion
+
+            #region World Population - List (2)
+            if(choice == "2")
+            {
+                var data = (new ParseCsv()).GetRecordsList<WorldPopulationModel>(worldPopFile, 100, "Year_2020");
+
+                Console.WriteLine("Array List");
+                foreach (var curCountry in data)
+                {
+                    Console.WriteLine($"{curCountry.Year_2020:0 000 000}: {curCountry.Country}");
+                }
             }
             #endregion
         }

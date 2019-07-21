@@ -13,7 +13,7 @@ namespace PlayGround.Common
 {
     public class ParseCsv
     {
-        public T[] GetRecordsArray<T>(string fileName, int count, string sortBy)
+        public List<T> GetRecordsList<T>(string fileName, int count, string sortBy, bool getAll = true)
         {
             if (!File.Exists(fileName))
             {
@@ -26,16 +26,21 @@ namespace PlayGround.Common
                 {
                     var initList = csv.GetRecords<T>().ToList();
                     var recordsOrdered = OrderByField<T>(initList.AsQueryable(), sortBy, false);
-                    var records = recordsOrdered.Take(count).ToArray();
+                    var records = getAll ? recordsOrdered.ToList() : recordsOrdered.Take(count).ToList();
                     return records;
                 }
             }
 
         }
 
+        public T[] GetRecordsArray<T>(string fileName, int count, string sortBy)
+        {
+            return GetRecordsList<T>(fileName, count, sortBy, false).ToArray();
+        }
+
         private IQueryable<T> OrderByField<T>(IQueryable<T> q, string SortField, bool Ascending)
         {
-            var param = Expression.Parameter(typeof(T), "p");
+            var param = Expression.Parameter(typeof(T), SortField);
             var prop = Expression.Property(param, SortField);
             var exp = Expression.Lambda(prop, param);
             string method = Ascending ? "OrderBy" : "OrderByDescending";
