@@ -33,6 +33,21 @@ namespace PlayGround.Common
 
         }
 
+        public Dictionary<string,T> GetRecordsDictionary<T>(string fileName, int count, string sortBy, string key)
+        {
+            var data = GetRecordsList<T>(fileName, count, sortBy, true);
+            Dictionary<string, T> keyValuePair = new Dictionary<string, T>();
+            var prop = typeof(T).GetProperty(key);
+
+            foreach (var item in data)
+            {
+                string keyText = prop.GetValue(item).ToString();
+                keyValuePair.Add(keyText, item);
+            }
+
+            return keyValuePair;
+        }
+
         public T[] GetRecordsArray<T>(string fileName, int count, string sortBy)
         {
             return GetRecordsList<T>(fileName, count, sortBy, false).ToArray();
