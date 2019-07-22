@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Update="Data\Pop by Largest Final.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Data\World_population.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

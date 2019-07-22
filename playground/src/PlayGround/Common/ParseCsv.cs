@@ -13,6 +13,22 @@ namespace PlayGround.Common
 {
     public class ParseCsv
     {
+        public Dictionary<string, List<T>> GetPopulationByRegion<T>(string fileName, string sortBy, string partitionBy)
+        {
+            var countryList = GetRecordsList<T>(fileName, 10, sortBy, true);
+            var paritionProp = typeof(T).GetProperty(partitionBy);
+            var distinctKeys = countryList.Select(c => paritionProp.GetValue(c)).Distinct();
+            var list = new Dictionary<string, List<T>>();
+
+            foreach (var curKey in distinctKeys)
+            {
+                List<T> curCountries = countryList.Where(c => paritionProp.GetValue(c).ToString() == curKey.ToString()).ToList();
+                list.Add(curKey.ToString(), curCountries);
+            }
+
+            return list;
+        }
+
         public List<T> GetRecordsList<T>(string fileName, int count, string sortBy, bool getAll = true)
         {
             if (!File.Exists(fileName))
@@ -33,7 +49,7 @@ namespace PlayGround.Common
 
         }
 
-        public Dictionary<string,T> GetRecordsDictionary<T>(string fileName, int count, string sortBy, string key)
+        public Dictionary<string, T> GetRecordsDictionary<T>(string fileName, int count, string sortBy, string key)
         {
             var data = GetRecordsList<T>(fileName, count, sortBy, true);
             Dictionary<string, T> keyValuePair = new Dictionary<string, T>();
