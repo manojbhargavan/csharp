@@ -6,26 +6,24 @@ namespace GameConsoleNullables
     {
         static void Main(string[] args)
         {
-            var player = new PlayerCharacter() { Name = "Manoj", DaySinceLastLogin = 42 };
-            PlayerDisplayer.Write(player);
-
-            PlayerCharacter[] players = new PlayerCharacter[3]
+            PlayerCharacter nandan = new PlayerCharacter(new IronBonesDefence())
             {
-                new PlayerCharacter() { Name = "manoj" },
-                new PlayerCharacter(),
-                null
+                Name = "Nandan"
             };
 
-            var name1 = players?[0]?.Name;
-            var name2 = players?[1]?.Name;
-            var name3 = players?[2]?.Name;
+            PlayerCharacter saranya = new PlayerCharacter(new DiamondSkinDefence())
+            {
+                Name = "Saranya"
+            };
 
-            PlayerCharacter[] players1 = null;
+            PlayerCharacter manoj = new PlayerCharacter(new NullDefence())
+            {
+                Name = "Manoj"
+            };
 
-            var name4 = players1?[0]?.Name;
-            var name5 = players1?[1]?.Name;
-            var name6 = players1?[2]?.Name;
-
+            nandan.Hit(10);
+            saranya.Hit(10);
+            manoj.Hit(10);
 
             Console.ReadLine();
 
