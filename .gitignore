@@ -7,3 +7,7 @@ playground/src/PlayGround/obj/*
 playground/test/bin/*
 playground/test/obj/*
 /playground/.vs/playground
+GameConsoleNullables/GameConsoleNullables/bin/*
+GameConsoleNullables/GameConsoleNullables/obj/*
+GameConsoleNullables/.vs/*
+GameConsoleNullables/GameConsoleNullables/.vs/*
