@@ -11,3 +11,5 @@ GameConsoleNullables/GameConsoleNullables/bin/*
 GameConsoleNullables/GameConsoleNullables/obj/*
 GameConsoleNullables/.vs/*
 GameConsoleNullables/GameConsoleNullables/.vs/*
+/GameConsoleNullables/GameConsoleBaseClassPattern/obj
+/GameConsoleNullables/GameConsoleBaseClassPattern/bin
