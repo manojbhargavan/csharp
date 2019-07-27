@@ -21,3 +21,4 @@ datetimehandle/src/datetimehandle/bin/*
 datetimehandle/src/datetimehandle/obj/*
 datetimehandle/test/datetimehandle.test/bin/*
 datetimehandle/test/datetimehandle.test/obj/*
+/datetimehandle/.vs/datetimehandle/v16
