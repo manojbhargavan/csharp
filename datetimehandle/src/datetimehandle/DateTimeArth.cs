@@ -26,34 +26,5 @@ namespace datetimehandle
             Console.WriteLine($"Total Days: {timeSpan.TotalDays}, Total Hours: {timeSpan.TotalHours}, Total Minutes: {timeSpan.TotalMinutes}");
         }
 
-        internal static string GetDifferenceString(this DateTimeOffset dateTimeFrom, DateTimeOffset dateTimeTo)
-        {
-            TimeSpan timeSpan = dateTimeTo.Subtract(dateTimeFrom);
-            return GetDifferenceStringTimeSpan(timeSpan);
-        }
-
-        internal static string GetMultipliedDifferenceString(this DateTimeOffset dateTimeFrom, DateTimeOffset dateTimeTo, double factor)
-        {
-            TimeSpan timeSpan = dateTimeTo.Subtract(dateTimeFrom);
-            return GetDifferenceStringTimeSpan(timeSpan.Multiply(factor));
-        }
-
-        private static string GetDifferenceStringTimeSpan(TimeSpan timeSpan)
-        {
-            long days = timeSpan.Days;
-            long hours = timeSpan.Hours;
-            long minutes = timeSpan.Minutes;
-            long seconds = timeSpan.Seconds;
-            long millSeconds = timeSpan.Milliseconds;
-
-            return $"{days.TimePluralize("Day")} {hours.TimePluralize("Hour")} " +
-                $"{minutes.TimePluralize("Minute")} {seconds.TimePluralize("Second")} {millSeconds.TimePluralize("Millisecond")}";
-        }
-
-        private static string TimePluralize(this long value, string type)
-        {
-            return $"{value} {type}{(value > 1 ? "s" : "")}";
-        }
-
     }
 }

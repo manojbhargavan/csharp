@@ -22,3 +22,8 @@ datetimehandle/src/datetimehandle/obj/*
 datetimehandle/test/datetimehandle.test/bin/*
 datetimehandle/test/datetimehandle.test/obj/*
 /datetimehandle/.vs/datetimehandle/v16
+/datetimehandle/.vs/datetimehandle/DesignTimeBuild
+/SessionBuilder/SessionBuilder.Core/obj
+/SessionBuilder/SessionBuilder.Web/.vs/SessionBuilder.Web
+/SessionBuilder/SessionBuilder.Web/SessionBuilder.Web/obj
+/SessionBuilder/SessionBuilder.Web/SessionBuilder.Web/wwwroot/lib

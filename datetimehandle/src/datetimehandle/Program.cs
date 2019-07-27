@@ -10,7 +10,31 @@ namespace datetimehandle
         {
             Basics();
             DateTimeArithmetic();
+            Senarios();
+        }
 
+        private static void Senarios()
+        {
+            Console.WriteLine("\n---------Senarios-----------");
+            string timeFromString = "2019-07-01 10:00:00 PM +02:00";
+            string timeToString = "2019-07-03 23:11:45.899 PM +02:00";
+            string timeTestString1 = "2019-07-02 23:11:45.899 PM +02:00";
+            string timeTestString2 = "2019-07-05 23:11:45.899 PM +02:00";
+            string timeTestString3 = "2019-07-03 23:11:45.899 PM -05:30";
+            DateTimeOffset timeFrom = DateTimeOffset.Parse(timeFromString);
+            DateTimeOffset timeTo = DateTimeOffset.Parse(timeToString);
+            DateTimeOffset timeTest1 = DateTimeOffset.Parse(timeTestString1);
+            DateTimeOffset timeTest2 = DateTimeOffset.Parse(timeTestString2);
+            DateTimeOffset timeTest3 = DateTimeOffset.Parse(timeTestString3);
+            Console.WriteLine($"From: {timeFrom.ToUniversalTime()}, To: {timeTo.ToUniversalTime()}");
+            Console.WriteLine($"Test date: {timeTestString1}, UTC: {timeTest1.ToUniversalTime()}, Between: {timeTest1.IsBetween(timeFrom,timeTo)}");
+            Console.WriteLine($"Test date: {timeTestString2}, UTC: {timeTest2.ToUniversalTime()}, Between: {timeTest2.IsBetween(timeFrom, timeTo)}");
+            Console.WriteLine($"Test date: {timeTestString3}, UTC: {timeTest3.ToUniversalTime()}, Between: {timeTest3.IsBetween(timeFrom, timeTo)}");
+
+            string myBirthdayString = "1985-05-07 07:30:00 AM +05:30";
+            DateTimeOffset myBirthday = DateTimeOffset.Parse(myBirthdayString);
+            Console.WriteLine($"Birthday: {myBirthday.ToUniversalTime()}Age: {DateTimeOffset.UtcNow - myBirthday.ToUniversalTime()}");
+            Console.Write("\n----------------------------");
         }
 
         private static void DateTimeArithmetic()
