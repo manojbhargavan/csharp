@@ -5,7 +5,7 @@ namespace datetimehandle
 {
     public static class Basic
     {
-        public static DateTime GetConverted(this DateTime dateTime, string timeZone)
+        internal static DateTime GetConverted(this DateTime dateTime, string timeZone)
         {
             TimeZoneInfo timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById(timeZone);
             try
@@ -18,7 +18,7 @@ namespace datetimehandle
             }
         }
 
-        public static List<string> GetTimeZone(this DateTimeOffset dateTime)
+        internal static List<string> GetTimeZone(this DateTimeOffset dateTime)
         {
             List<string> timeZoneDisplayName = new List<string>();
             foreach (var timeZone in TimeZoneInfo.GetSystemTimeZones())
