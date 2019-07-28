@@ -34,3 +34,8 @@ datetimehandle/test/datetimehandle.test/obj/*
 /Interfaces/Person/Person.TestMock/obj
 /Interfaces/Person/PersonViewer/obj
 /Interfaces/Person/.vs/Person/v16
+/Interfaces/Person/Person/bin/Debug/netstandard2.0
+/Interfaces/Person/Person.CsvRepository/bin/Debug/netstandard2.0
+/Interfaces/Person/Person.ServiceRepository/bin/Debug/netstandard2.0
+/Interfaces/Person/Person.TestMock/bin/Debug/netstandard2.0
+/Interfaces/Person/PersonViewer/bin/Debug/netcoreapp2.2

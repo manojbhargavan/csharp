@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Person.Repository
 {
-    public abstract class StandardRepository : IPersonRepository
+    public abstract class StandardRepository : IPersonReaderRepository
     {
         public abstract List<Person> GetAllPersons();
 

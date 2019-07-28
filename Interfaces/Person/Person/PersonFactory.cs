@@ -5,12 +5,12 @@ namespace Person.Repository
 {
     public static class PersonFactory
     {
-        public static IPersonRepository GetPersonRepository()
+        public static IPersonReaderRepository GetPersonRepository()
         {
             string repositoryId = ConfigurationManager.AppSettings["Repository"];
             Type repositoryType = Type.GetType(repositoryId);
             object objectType = Activator.CreateInstance(repositoryType);
-            IPersonRepository personRepository = objectType as IPersonRepository;
+            IPersonReaderRepository personRepository = objectType as IPersonReaderRepository;
             return personRepository;
         }
     }
