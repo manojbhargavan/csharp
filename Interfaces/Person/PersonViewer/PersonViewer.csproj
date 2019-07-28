@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Person.CsvRepository\Person.Csv.csproj" />
+    <ProjectReference Include="..\Person.ServiceRepository\Person.Service.csproj" />
+    <ProjectReference Include="..\Person.TestMock\Person.TestMock.csproj" />
+    <ProjectReference Include="..\Person\Person.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
