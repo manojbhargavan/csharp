@@ -1,4 +1,4 @@
-# Interface to implement repository and dynamic factory pattern
+# Example on how to use Interface to implement repository and dynamic factory pattern
 This Project shows how interfaces can be used effectively to implement a repository pattern and dynamic factory pattern.
 In the project PersonViewer change the App.Config to use switch between data sources from were the person data is being fetched.
 
