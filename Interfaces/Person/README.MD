@@ -4,9 +4,7 @@ In the project PersonViewer change the App.Config to use switch between data sou
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <appSettings>
-
     <add key ="Repository" value="Person.TestMock.TestMockRepository, Person.TestMock, Version=1.0.0.0, Culture=neutral"/>
-
     <!--
     <add key ="Repository" value="Person.Csv.CsvRepository, Person.Csv, Version=1.0.0.0, Culture=neutral"/>
     -->
