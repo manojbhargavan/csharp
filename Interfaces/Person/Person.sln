@@ -15,7 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonViewer", "PersonViewer\PersonViewer.csproj", "{A5197C1E-22BC-41B4-9EC0-2E8939572120}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person.TestMock", "Person.TestMock\Person.TestMock.csproj", "{4324EF86-6342-48F4-84B3-3D7ABE0AF094}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Person.TestMock", "Person.TestMock\Person.TestMock.csproj", "{4324EF86-6342-48F4-84B3-3D7ABE0AF094}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9F2CE31B-1D77-4F51-AA59-8884266CB7A3}"
+	ProjectSection(SolutionItems) = preProject
+		README.MD = README.MD
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

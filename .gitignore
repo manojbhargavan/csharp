@@ -27,3 +27,10 @@ datetimehandle/test/datetimehandle.test/obj/*
 /SessionBuilder/SessionBuilder.Web/.vs/SessionBuilder.Web
 /SessionBuilder/SessionBuilder.Web/SessionBuilder.Web/obj
 /SessionBuilder/SessionBuilder.Web/SessionBuilder.Web/wwwroot/lib
+/Interfaces/Person/.vs/Person/v16/Server/sqlite3
+/Interfaces/Person/Person/obj
+/Interfaces/Person/Person.CsvRepository/obj
+/Interfaces/Person/Person.ServiceRepository/obj
+/Interfaces/Person/Person.TestMock/obj
+/Interfaces/Person/PersonViewer/obj
+/Interfaces/Person/.vs/Person/v16
