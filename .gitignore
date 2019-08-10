@@ -39,3 +39,8 @@ datetimehandle/test/datetimehandle.test/obj/*
 /Interfaces/Person/Person.ServiceRepository/bin/Debug/netstandard2.0
 /Interfaces/Person/Person.TestMock/bin/Debug/netstandard2.0
 /Interfaces/Person/PersonViewer/bin/Debug/netcoreapp2.2
+/LINQ/Introduction/.vs/LinqSamples
+/LINQ/Introduction/Cars/obj
+/LINQ/Introduction/Features/obj
+/LINQ/Introduction/Introduction/obj
+/LINQ/Introduction/Queries/obj
