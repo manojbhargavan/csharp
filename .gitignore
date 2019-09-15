@@ -45,3 +45,4 @@ datetimehandle/test/datetimehandle.test/obj/*
 /LINQ/Introduction/Introduction/obj
 /LINQ/Introduction/Queries/obj
 /LINQ/Introduction/Cars/bin/Debug/netcoreapp2.2
+/LINQ/Introduction/Cars/bin/Debug/netcoreapp3.0

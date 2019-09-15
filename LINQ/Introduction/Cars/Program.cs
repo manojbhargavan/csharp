@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace Cars
 {
@@ -10,6 +11,45 @@ namespace Cars
         static void Main(string[] args)
         {
             var cars = ProcessFile("fuel.csv");
+            //CarStats(cars);
+            //CreateXml(cars, "fuel.xml");
+            InsertData(cars);
+
+        }
+
+        private static void InsertData(List<Car> carsData)
+        {
+            CarsDb cars = new CarsDb();
+
+            carsData.ForEach(c => {
+                cars.Cars.Add(c);
+            });
+            cars.SaveChanges();
+        }
+
+        private static void CreateXml(List<Car> carsData, string path)
+        {
+            XDocument document = new XDocument();
+            var ns = (XNamespace)"http://manoj.com/cars/2019";
+            XElement cars = new XElement(ns + "Cars");
+            
+            carsData.ForEach(c =>
+            {
+                XElement car = new XElement(ns + "Car");
+                XAttribute name = new XAttribute("Name", c.Name);
+                XAttribute manufacturer = new XAttribute("Manufacturer", c.Manufacturer);
+                XAttribute combined = new XAttribute("Combined", c.Combined);
+                car.Add(name);
+                car.Add(manufacturer);
+                car.Add(combined);
+                cars.Add(car);
+            });
+            document.Add(cars);
+            document.Save(path);
+        }
+
+        private static void CarStats(List<Car> cars)
+        {
             //cars.Print();
             Console.WriteLine("***\nMost Efficient Cars");
             //Fuel Eff Car
@@ -29,7 +69,6 @@ namespace Cars
             Console.WriteLine(cars.Any(c => c.Manufacturer == "Ford"));
             Console.WriteLine("***\nAll Ford");
             Console.WriteLine(cars.All(c => c.Manufacturer == "Ford"));
-
         }
 
         private static List<Car> ProcessFile(string path)
