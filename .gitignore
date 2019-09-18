@@ -46,3 +46,6 @@ datetimehandle/test/datetimehandle.test/obj/*
 /LINQ/Introduction/Queries/obj
 /LINQ/Introduction/Cars/bin/Debug/netcoreapp2.2
 /LINQ/Introduction/Cars/bin/Debug/netcoreapp3.0
+/DelegatesAndEvents/.vs/DelegatesAndEvents/v16
+/DelegatesAndEvents/DelegatesAndEvents/bin/Debug/netcoreapp3.0
+/DelegatesAndEvents/DelegatesAndEvents/obj
