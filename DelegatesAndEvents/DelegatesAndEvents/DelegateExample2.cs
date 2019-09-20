@@ -8,7 +8,7 @@ namespace DelegatesAndEvents
 {
     public delegate void WhatAreYourWorkingOn(int hours);
 
-    public class Example2 : IExample
+    public class DelegateExample2 : IExample
     {
         public void RunExample()
         {

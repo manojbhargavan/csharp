@@ -49,3 +49,4 @@ datetimehandle/test/datetimehandle.test/obj/*
 /DelegatesAndEvents/.vs/DelegatesAndEvents/v16
 /DelegatesAndEvents/DelegatesAndEvents/bin/Debug/netcoreapp3.0
 /DelegatesAndEvents/DelegatesAndEvents/obj
+/DelegatesAndEvents/.vs/DelegatesAndEvents/DesignTimeBuild

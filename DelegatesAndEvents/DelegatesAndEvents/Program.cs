@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DelegatesAndEvents
 {
@@ -6,9 +7,25 @@ namespace DelegatesAndEvents
     {
         static void Main(string[] args)
         {
-            RunExamples(typeof(Example1));
-            Console.WriteLine("*******************");
-            RunExamples(typeof(Example2));
+            List<Type> examples = new List<Type>
+            {
+                typeof(DelegateExample1),
+                typeof(DelegateExample2),
+                typeof(DelegateExample3),
+                typeof(DelegatePlugin)
+            };
+
+            examples.ForEach(e => Execute(e));
+        }
+
+        private static void Execute(Type e)
+        {
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine($"Running example for {e.Name}");
+            Console.WriteLine("-------------------------------");
+            RunExamples(e);
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine();
         }
 
         internal static void RunExamples(Type example)

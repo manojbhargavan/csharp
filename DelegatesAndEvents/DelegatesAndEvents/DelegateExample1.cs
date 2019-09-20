@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DelegatesAndEvents
 {
     public delegate void WorkDone(int hours, WorkType workType);
-    public class Example1 : IExample
+    public class DelegateExample1 : IExample
     {
         public void RunExample()
         {
