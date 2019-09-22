@@ -12,7 +12,9 @@ namespace DelegatesAndEvents
                 typeof(DelegateExample1),
                 typeof(DelegateExample2),
                 typeof(DelegateExample3),
-                typeof(DelegatePlugin)
+                typeof(DelegatePlugin),
+                typeof(EventExample1),
+                typeof(EventExample2)
             };
 
             examples.ForEach(e => Execute(e));

@@ -18,18 +18,18 @@ namespace DelegatesAndEvents
             Document(WorkDone2);
         }
 
-        private void Document(WorkDone delegateWork)
+        public void Document(WorkDone delegateWork)
         {
             Console.WriteLine("Let me delegate this");
             delegateWork(8, WorkType.Document);
         }
 
-        private void WorkDone2(int hours, WorkType workType)
+        public void WorkDone2(int hours, WorkType workType)
         {
             Console.WriteLine($"Work Done 1: Hours {hours}, Type {workType}");
         }
 
-        private void WorkDone1(int hours, WorkType workType)
+        public void WorkDone1(int hours, WorkType workType)
         {
             Console.WriteLine($"Work Done 2: Hours {hours}, Type {workType}");
         }

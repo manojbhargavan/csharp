@@ -50,3 +50,10 @@ datetimehandle/test/datetimehandle.test/obj/*
 /DelegatesAndEvents/DelegatesAndEvents/bin/Debug/netcoreapp3.0
 /DelegatesAndEvents/DelegatesAndEvents/obj
 /DelegatesAndEvents/.vs/DelegatesAndEvents/DesignTimeBuild
+/DelegatesDemo/.vs/DelegatesDemo/v16
+/DelegatesDemo/ConsoleUI/bin/Debug
+/DelegatesDemo/ConsoleUI/obj/Debug
+/DelegatesDemo/DemoLibrary/bin/Debug
+/DelegatesDemo/DemoLibrary/obj/Debug
+/DelegatesDemo/WinFormUI/bin/Debug
+/DelegatesDemo/WinFormUI/obj/Debug
