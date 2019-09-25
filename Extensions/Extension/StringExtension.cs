@@ -12,6 +12,7 @@ namespace Extension
         {
             string[] name = fullName.Split(',');
             if(name.Length != 2) throw new ArgumentException("Name must be of the format \"firstname, lastname\"");
+            Console.WriteLine();
             return $"{name[1].Trim()}, {name[0].Trim()}".ToUpper();
         }
     }
