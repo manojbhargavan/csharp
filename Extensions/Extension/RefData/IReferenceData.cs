@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Collections.Generic;
 namespace Extension.RefData
 {
     public interface IReferenceData

@@ -23,10 +23,7 @@ namespace ACM.BL
         public long Quantity { get; set; }
         public double? PurchasePrice { get; set; }
         
-        public bool Validate()
-        {
-            return ProductId != null;
-        }
+        public bool Validate() => true;
 
         public OrderItem Retrive(int orderItemId)
         {
