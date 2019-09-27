@@ -18,7 +18,7 @@ namespace Extension.Tests
         public void GetItems_Get2PerSource(Type ImplementationType, int expectedCount)
         {
             // Arrange
-            IReferenceData data = (IReferenceData)Activator.CreateInstance(ImplementationType);
+            var data = (IReferenceData)Activator.CreateInstance(ImplementationType);
 
             // Act
             var actualCount = data.GetItems().ToList().Count;
@@ -27,20 +27,22 @@ namespace Extension.Tests
             Assembly.Equals(expectedCount, actualCount);
         }
 
-        [Theory]
-        [InlineData(typeof(ApiReferenceDataSource),"xyz", 2)]
-        [InlineData(typeof(SqlReferenceDataSource),"xyz", 2)]
-        [InlineData(typeof(XmlReferenceDataSource),"xyz", 2)]
-        public void GetItemsByCode_Get2PerSource(Type ImplementationType, string code, int expectedCount)
+        [Fact]
+        public void GetItemsByCode_Get2PerSource()
         {
             // Arrange
-            IReferenceData data = (IReferenceData)Activator.CreateInstance(ImplementationType);
-
+            IReferenceData[] data = new IReferenceData[] 
+            {
+                new ApiReferenceDataSource(),            
+                new SqlReferenceDataSource(),            
+                new XmlReferenceDataSource() 
+            };
+            
             // Act
-            var actualCount = data.GetItemsByCode(code).ToList().Count;
+            var actualCount = data.GetAllItemsByCode("xyz").ToList().Count;
 
             // Assert
-            Assembly.Equals(expectedCount, actualCount);
+            Assert.Equal(6, actualCount);
         }
     }
 }
