@@ -22,7 +22,10 @@ namespace Extensions.Advanced
 
             private class Class3
             {
-                private string 
+                private string GetString2()
+                {
+                    return "c";
+                }
             }
         }
     }
