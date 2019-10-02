@@ -6,8 +6,8 @@ namespace Reflection
     {
         static void Main(string[] args)
         {
-            ReflectionIsSlow reflectionIsSlowDemo = new ReflectionIsSlow(int.MaxValue);
+            ReflectionIsSlow reflectionIsSlowDemo = new ReflectionIsSlow(50000000);
             reflectionIsSlowDemo.RunTestAndPrint();
         }
     }
-}
+} 
